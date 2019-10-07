@@ -1,22 +1,127 @@
-.App {
+body{
+  background-color: black;
+  color:white;
+  font-family: 'Secular One', sans-serif;
+}
+header{
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
   text-align: center;
+  
+}
+main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+section{
+display: flex;
+justify-content: flex-end;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ball{
+  height: 500px;
+  width: 500px;
+  background-image: url('https://media0.giphy.com/media/2dnGHOAQt1tIziib5X/giphy.gif?cid=790b7611dd128a882eb21e1e901550f7223245d419b731b3&rid=giphy.gif');
+  background-size: cover;
+  background-position:center;
+  /* border-radius: 500px; */
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.FAQ-section{
+  height: 400px;
+  width: 15vw;
+  padding: 5px 5px 5px 30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  box-shadow: 5px 2px 15px 5px #262626;
+  border-radius: 0px 20px 20px 0px;
+  border: solid 1px black;
+  background: linear-gradient(to right, black 0%, #BC0085 100%);
+}
+.button{
+  padding:5px;
+  border: solid 1px black;
+  border-radius: 20px;
+  background: #BC0085;
+  background: linear-gradient(to right, #BC0085 0%, #FF62F1 50%, #E6ACCD 100%);
+  color: #FFFFFF;
+  font-family: 'Secular One', sans-serif;
+  font-size:15px;
+  cursor: pointer;
+  
+}
+.button:hover{
+  background: linear-gradient(to right, #004FAE 0%, #019EE9 100%);
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+.list{
+  width: 20vw;
+  padding: 5px 30px 5px 5px;
+  background: #019EE9;
+  background: linear-gradient(to right, #019EE9 0%, #004FAE 25%, #000000 100%);
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: -5px 2px 15px 5px #262626;
+  border: solid 1px black;
+  text-align: center;
+}
+.ask-buttons{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+.list-buttons{
+  padding:5px;
+  margin: 0px 5px;
+  border: solid 1px black;
+  border-radius: 20px;
+  background: linear-gradient(to right, #004FAE 0%, #019EE9 100%);
+  color:white;
+  font-family: 'Secular One', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+.list-buttons:hover{
+  background: linear-gradient(to right, #BC0085 0%, #FF62F1 50%, #E6ACCD 100%);
+  animation: bounce 1s ease;
+  animation-iteration-count: 1;
+}
+.input{
+  width: 100%;
+  height:30px;
+  outline: none;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
   color: white;
+  font-family: 'Secular One', sans-serif;
+}
+::placeholder{
+  text-align: center;
+  color: #7EC3F8
 }
 
-.App-link {
-  color: #09d3ac;
+@keyframes swing{
+  15%{transform: translateX(5px)}
+  30%{transform: translateX(-5px)}
+  50%{transform: translateX(3px)}
+  65%{transform: translateX(-3px)}
+  80%{transform: translateX(2px)}
+  100%{transform: translateX(0)}
+}
+@keyframes bounce{
+  15%{transform: translateY(5px)}
+  30%{transform: translateY(-5px)}
+  50%{transform: translateY(3px)}
+  65%{transform: translateY(-3px)}
+  80%{transform: translateY(2px)}
+  100%{transform: translateY(0)}
 }
